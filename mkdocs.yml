@@ -6,6 +6,12 @@ repo_name: tomlupo/house-of-quants
 
 theme:
   name: material
+  logo: assets/house-of-quants.svg
+  favicon: assets/house-of-quants.svg
+  palette:
+    scheme: slate
+    primary: black
+    accent: light blue
   features:
     - navigation.tabs
     - navigation.sections
@@ -32,6 +38,9 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
 
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
