@@ -1,0 +1,37 @@
+site_name: House of Quants
+site_description: Quantitative Research & Solutions
+site_url: https://tomlupo.github.io/house-of-quants/
+repo_url: https://github.com/tomlupo/house-of-quants
+repo_name: tomlupo/house-of-quants
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Research:
+      - Overview: research/index.md
+  - Notes:
+      - Overview: notes/index.md
+  - Code:
+      - Overview: code/index.md
+  - About: about.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
