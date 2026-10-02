@@ -7,7 +7,11 @@ copies, so a colour changed in one place and not the other turns this red.
 The site is dark-only (mkdocs.yml: `scheme: slate`, no toggle), so the pack is
 `single_theme: dark`. Keys the CSS has no token for are listed in UNSOURCED and
 stay pack-owned: good/warn/bad are omitted and fall back to qute-research's
-neutral dark palette; chart series 1-4 are pack-owned hues readable on the navy.
+neutral dark palette; chart series 1-3 are pack-owned hues readable on the navy,
+kept clear of those three so a series never reads as a good/bad signal.
+
+No CI job runs this (the only workflow is the Pages deploy): run `pytest tests`
+after touching either file.
 """
 
 import json
@@ -31,7 +35,7 @@ PACK_OWNER = {
 }
 UNSOURCED = {"good", "warn", "bad"}
 # chart index -> CSS variable; the other indices are pack-owned
-CHART_OWNER = {0: "hoq-blue", 5: "hoq-muted"}
+CHART_OWNER = {0: "hoq-blue", 4: "hoq-muted"}
 
 
 def _norm(v):
