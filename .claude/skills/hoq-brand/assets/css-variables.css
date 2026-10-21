@@ -1,0 +1,174 @@
+/**
+ * House of Quants Brand - CSS Custom Properties
+ *
+ * THE owner of every brand value. The site wears it as-is:
+ * docs/stylesheets/brand.css is a symlink to this file, loaded before
+ * docs/stylesheets/extra.css, which holds layout and MkDocs overrides only and
+ * no colour literal. Copies checked by tests/test_brand_pack.py:
+ * .qute/brand.json and the Quark pack (agents/quark/.qute/brand.json, by its
+ * PROVENANCE note). tailwind.config.js mirrors it by hand; the test checks its
+ * colours exist here.
+ *
+ * Source: the House of Quants site, https://tomlupo.github.io/house-of-quants/
+ * (stylesheets/extra.css, md5 b920f95f139ec94099bf8a52417eda23, read
+ * 2026-10-21 and equal to the repo's docs/stylesheets/extra.css at 9f3def2),
+ * mkdocs.yml (Material, scheme slate, default fonts) and
+ * docs/assets/house-of-quants.svg. Values the site does not give are marked
+ * "derived" below.
+ *
+ * The brand is DARK ONLY: the site has no light scheme and no toggle, and the
+ * mark carries its own night background.
+ */
+
+:root {
+  /* ========================================
+     SURFACES (site: extra.css :root and body)
+     ======================================== */
+  --color-background: #060b12;      /* page, deep navy */
+  --color-surface: #0b1420;         /* panel */
+  --color-surface-soft: #0e1a29;    /* inset panel, chip, chart grid */
+  --color-header: #08111c;          /* Material primary: header colour */
+  --color-header-glass: rgba(5, 10, 17, 0.94);  /* header and tabs, blurred */
+
+  --gradient-page: linear-gradient(180deg, #07101a 0%, #050911 72%);
+  --glow-page: radial-gradient(circle at 50% 0%, rgba(39, 129, 191, 0.13), transparent 32rem);
+  --gradient-card: linear-gradient(180deg, rgba(15, 28, 43, 0.92), rgba(8, 17, 28, 0.92));
+
+  /* ========================================
+     TEXT
+     ======================================== */
+  --color-text: #eaf6ff;            /* body */
+  --color-heading: #f5fbff;         /* h1-h3 */
+  --color-text-emphasis: #f2faff;   /* card titles */
+  --color-text-lead: #cde9f8;       /* subtitle under the title */
+  --color-text-muted: #9eb5c6;      /* copy, captions */
+  --color-text-on-accent: #04101a;  /* text on the blue button */
+
+  /* ========================================
+     ACCENT — one hue, the sky blue of the mark
+     ======================================== */
+  --color-primary: #77cfff;         /* links, kicker, chart series 1 */
+  --color-accent: #43b8ff;          /* Material accent: hover, focus */
+  --color-accent-from: #2f9fe8;     /* primary button gradient start */
+  --color-accent-to: #6bcfff;       /* primary button gradient end */
+  --gradient-accent: linear-gradient(135deg, #2f9fe8, #6bcfff);
+  --glow-accent: 0 0 28px rgba(61, 182, 255, 0.18);
+  --glow-visual: rgba(55, 170, 255, 0.12);
+
+  /* ========================================
+     BORDERS
+     ======================================== */
+  --color-border: rgba(130, 205, 255, 0.16);
+  --color-border-hover: rgba(102, 198, 255, 0.36);
+  --color-border-faint: rgba(127, 207, 255, 0.12);
+
+  /* ========================================
+     SEMANTIC — derived: the site shows no signal colours. These are
+     qute-research's neutral dark values, which HoQ pages rendered before they
+     were named here. Each reads as text at >= 5:1 on every surface (error is
+     the lowest, 5.2:1 on surface-soft), so none needs an -ink variant.
+     ======================================== */
+  --color-success: #4CC08A;
+  --color-warning: #E0A458;
+  --color-error: #E36358;
+
+  /* ========================================
+     CHART SERIES — derived (TOM-1361): blue first, hues readable on the navy
+     and kept clear of success/warning/error, muted last
+     ======================================== */
+  --chart-1: #77cfff;
+  --chart-2: #B39DDB;
+  --chart-3: #4FD1C5;
+  --chart-4: #F48FB1;
+  --chart-5: #9eb5c6;
+
+  /* ========================================
+     TYPOGRAPHY — Material's default faces (mkdocs.yml sets no font):
+     Roboto 300/400/700 and Roboto Mono 400/700 from Google Fonts
+     ======================================== */
+  --font-family-base: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-family-mono: 'Roboto Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-title: 720;         /* h1; Roboto from Google renders it at 700 */
+
+  --font-size-title: clamp(2.6rem, 7vw, 5.5rem);  /* hero title */
+  --font-size-lead: clamp(1.15rem, 2.3vw, 1.55rem);
+  --font-size-body: 1rem;
+  --font-size-card: 0.9rem;
+  --font-size-kicker: 0.78rem;
+
+  --letter-spacing-heading: -0.025em;
+  --letter-spacing-title: -0.055em;
+  --letter-spacing-kicker: 0.14em;  /* uppercase eyebrows */
+
+  --line-height-title: 0.96;
+  --line-height-card: 1.55;
+  --line-height-copy: 1.75;
+
+  /* ========================================
+     SPACE, RADIUS, SHADOW, MOTION
+     ======================================== */
+  --content-max-width: 1280px;
+  --copy-max-width: 42rem;
+
+  --radius-sm: 8px;                 /* the mark in the header */
+  --radius-md: 10px;                /* buttons */
+  --radius-lg: 16px;                /* cards */
+  --radius-xl: 22px;                /* the mark as a hero visual */
+
+  --shadow-card-hover: 0 18px 45px rgba(0, 0, 0, 0.24);
+  --shadow-visual: 0 18px 54px rgba(0, 0, 0, 0.32);
+
+  --transition-card: 0.18s ease;
+}
+
+/* ============================================
+   COMPONENT STYLES — the site's own, reused by any HoQ page
+   ============================================ */
+
+/* Eyebrow above a title: "INDEPENDENT QUANTITATIVE RESEARCH" */
+.hoq-kicker {
+  display: inline-block;
+  margin-bottom: .8rem;
+  color: var(--color-primary);
+  font-size: var(--font-size-kicker);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-kicker);
+  text-transform: uppercase;
+}
+
+/* Link card: a title and one line of description */
+.hoq-card {
+  padding: 1.2rem 1.25rem;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-card), border-color var(--transition-card), box-shadow var(--transition-card);
+}
+
+.hoq-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.hoq-card strong {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--color-text-emphasis);
+  font-size: var(--font-size-body);
+}
+
+.hoq-card span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-card);
+  line-height: var(--line-height-card);
+}
+
+/* Numbers in tables and KPIs */
+.hoq-num {
+  font-variant-numeric: tabular-nums;
+}

@@ -3,9 +3,9 @@
   "name": "House of Quants",
   "eyebrow": "House of Quants · Quantitative Research & Solutions",
   "footer": "House of Quants research note. Not investment advice.",
-  "font": "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
+  "font": "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
   "mono": "'Roboto Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
-  "logo": "../docs/assets/house-of-quants.svg",
+  "logo": "../.claude/skills/hoq-brand/assets/logo/house-of-quants.svg",
   "single_theme": "dark",
   "dark": {
     "bg": "#060b12",
@@ -17,6 +17,9 @@
     "chip": "#0e1a29",
     "primary": "#77cfff",
     "accent": "#43b8ff",
+    "good": "#4CC08A",
+    "warn": "#E0A458",
+    "bad": "#E36358",
     "header_bg": "#08111c",
     "header_ink": "#eaf6ff"
   },

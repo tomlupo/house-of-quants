@@ -40,6 +40,8 @@ markdown_extensions:
   - pymdownx.superfences
 
 extra_css:
+  # brand.css is the brand skill's owner file (symlink); it loads first
+  - stylesheets/brand.css
   - stylesheets/extra.css
 
 extra_javascript:
