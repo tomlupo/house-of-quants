@@ -82,7 +82,10 @@ def test_brand_pack_equals_the_owner():
     assert set(pack["dark"]) == set(PACK_OWNER)
     for k, v in pack["dark"].items():
         assert _norm(v) == owner[PACK_OWNER[k]], k
-    chart = [owner[k] for k in sorted(owner) if k.startswith("chart-")]
+    series = sorted(
+        (k for k in owner if k.startswith("chart-")), key=lambda k: int(k[6:])
+    )
+    chart = [owner[k] for k in series]
     assert [_norm(c) for c in pack["chart"]] == chart
     assert _norm(pack["font"]) == owner["font-family-base"]
     assert _norm(pack["mono"]) == owner["font-family-mono"]

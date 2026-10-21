@@ -7,7 +7,6 @@
 // Load Roboto (300, 400, 700) and Roboto Mono from Google Fonts in the app.
 
 module.exports = {
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {

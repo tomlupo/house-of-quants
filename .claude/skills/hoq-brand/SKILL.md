@@ -84,8 +84,8 @@ of the CSS tokens:
 
 ### CSS variables
 
-Link `assets/css-variables.css` (the site serves it at
-`https://tomlupo.github.io/house-of-quants/stylesheets/brand.css`), or copy its
+Link `assets/css-variables.css` (once this skill is deployed, the site serves it
+at `https://tomlupo.github.io/house-of-quants/stylesheets/brand.css`), or copy its
 `:root` block. Style through the tokens (`var(--color-primary)`,
 `var(--font-family-base)`). Load Roboto from Google Fonts:
 `https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap`.
