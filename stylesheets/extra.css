@@ -1,0 +1,159 @@
+/*
+ * Site layout and Material overrides. Every brand value comes from
+ * brand.css (a symlink to .claude/skills/hoq-brand/assets/css-variables.css,
+ * the owner); this file holds no colour literal — tests/test_brand_pack.py
+ * fails if one comes back.
+ */
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--color-background);
+  --md-default-fg-color: var(--color-text);
+  --md-default-fg-color--light: var(--color-text-muted);
+  --md-primary-fg-color: var(--color-header);
+  --md-accent-fg-color: var(--color-accent);
+}
+
+body {
+  background:
+    var(--glow-page),
+    var(--gradient-page);
+}
+
+.md-header,
+.md-tabs {
+  background: var(--color-header-glass);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2rem;
+  width: 2rem;
+  border-radius: var(--radius-sm);
+}
+
+.md-main__inner {
+  max-width: var(--content-max-width);
+}
+
+.md-content__inner {
+  padding-top: 2rem;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--color-heading);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.md-typeset h1 {
+  font-weight: var(--font-weight-title);
+}
+
+.md-typeset a {
+  color: var(--color-primary);
+}
+
+.md-typeset .md-button {
+  border-radius: var(--radius-md);
+  border-color: var(--color-border);
+}
+
+.md-typeset .md-button--primary {
+  background: var(--gradient-accent);
+  border-color: transparent;
+  color: var(--color-text-on-accent);
+  box-shadow: var(--glow-accent);
+}
+
+.hoq-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+  gap: 3.2rem;
+  align-items: center;
+  min-height: 62vh;
+  padding: 2.5rem 0 3rem;
+}
+
+.hoq-title {
+  margin: 0 0 .8rem !important;
+  font-size: var(--font-size-title) !important;
+  line-height: var(--line-height-title) !important;
+  letter-spacing: var(--letter-spacing-title) !important;
+}
+
+.hoq-subtitle {
+  margin: 0 0 1.2rem;
+  color: var(--color-text-lead);
+  font-size: var(--font-size-lead);
+  font-weight: 600;
+}
+
+.hoq-copy {
+  max-width: var(--copy-max-width);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-copy);
+}
+
+.hoq-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 1.6rem;
+}
+
+.hoq-visual {
+  position: relative;
+  width: 68%;
+  max-width: 360px;
+  justify-self: center;
+  padding: .4rem;
+}
+
+.hoq-visual::before {
+  content: "";
+  position: absolute;
+  inset: 14% 16%;
+  background: var(--glow-visual);
+  filter: blur(40px);
+  border-radius: 50%;
+}
+
+.hoq-visual img {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-faint);
+  box-shadow: var(--shadow-visual);
+}
+
+.hoq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+@media (max-width: 820px) {
+  .hoq-hero {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    min-height: auto;
+    padding-top: 1.3rem;
+  }
+
+  .hoq-visual {
+    order: -1;
+    width: 72%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hoq-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="House of Quants">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#0d2740"/>
+      <stop offset="58%" stop-color="#07131f"/>
+      <stop offset="100%" stop-color="#03070c"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="640" height="640" fill="url(#bgGlow)"/>
+
+  <g stroke="#1b3850" stroke-width="1" opacity="0.5">
+    <path d="M64 92H576M64 132H576M64 172H576M64 212H576M64 252H576M64 292H576M64 332H576M64 372H576M64 412H576M64 452H576"/>
+    <path d="M96 64V500M144 64V500M192 64V500M240 64V500M288 64V500M336 64V500M384 64V500M432 64V500M480 64V500M528 64V500"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M72 358 C142 358 182 346 223 304 C265 260 286 204 320 195 C354 204 373 246 404 297 C446 345 497 357 568 358"
+          stroke="#57c6ff" stroke-width="14" opacity="0.16" filter="url(#softGlow)"/>
+    <path d="M72 358 C142 358 182 346 223 304 C265 260 286 204 320 195 C354 204 373 246 404 297 C446 345 497 357 568 358"
+          stroke="#e8f8ff" stroke-width="3.5" filter="url(#glow)"/>
+    <path d="M92 358H176M190 358H250M264 358H326M340 358H398M412 358H474M488 358H548"
+          stroke="#bfeaff" stroke-width="1.4" opacity="0.8"/>
+    <path d="M320 78V500M98 268H560M404 116V500"
+          stroke="#89d8ff" stroke-width="1" stroke-dasharray="5 6" opacity="0.68"/>
+    <path d="M130 305 C181 272 232 207 320 176 C368 188 389 232 404 297"
+          stroke="#8fdcff" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.65"/>
+  </g>
+
+  <g stroke="#9fe1ff" fill="none" opacity="0.85">
+    <circle cx="404" cy="297" r="34" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <path d="M404 244V350M351 297H457" stroke-width="1" stroke-dasharray="3 4"/>
+  </g>
+
+  <circle cx="404" cy="297" r="14" fill="#2faeea" opacity="0.38" filter="url(#softGlow)"/>
+  <circle cx="404" cy="297" r="12" fill="#2aaeea" stroke="#e9fbff" stroke-width="2.2" filter="url(#glow)"/>
+
+  <g fill="#d7f3ff">
+    <circle cx="320" cy="500" r="3"/>
+    <circle cx="404" cy="500" r="4"/>
+    <circle cx="96" cy="500" r="1.7"/>
+    <circle cx="112" cy="500" r="1.7"/>
+    <circle cx="128" cy="500" r="1.7"/>
+    <circle cx="144" cy="500" r="1.7"/>
+    <circle cx="160" cy="500" r="1.7"/>
+    <circle cx="176" cy="500" r="1.7"/>
+    <circle cx="192" cy="500" r="1.7"/>
+    <circle cx="208" cy="500" r="1.7"/>
+    <circle cx="224" cy="500" r="1.7"/>
+    <circle cx="240" cy="500" r="1.7"/>
+    <circle cx="256" cy="500" r="1.7"/>
+    <circle cx="272" cy="500" r="1.7"/>
+    <circle cx="288" cy="500" r="1.7"/>
+    <circle cx="304" cy="500" r="1.7"/>
+    <circle cx="336" cy="500" r="1.7"/>
+    <circle cx="352" cy="500" r="1.7"/>
+    <circle cx="368" cy="500" r="1.7"/>
+    <circle cx="384" cy="500" r="1.7"/>
+    <circle cx="420" cy="500" r="1.7"/>
+    <circle cx="436" cy="500" r="1.7"/>
+    <circle cx="452" cy="500" r="1.7"/>
+    <circle cx="468" cy="500" r="1.7"/>
+    <circle cx="484" cy="500" r="1.7"/>
+    <circle cx="500" cy="500" r="1.7"/>
+    <circle cx="516" cy="500" r="1.7"/>
+    <circle cx="532" cy="500" r="1.7"/>
+    <circle cx="548" cy="500" r="1.7"/>
+  </g>
+</svg>
